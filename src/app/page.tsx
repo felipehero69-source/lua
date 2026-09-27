@@ -1,67 +1,41 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <h1 style={{ fontSize: "3rem", color: "#F7F3EA" }}>Lua 🌙</h1>
+          <p style={{ fontSize: "1.2rem", color: "#D8BC70" }}>Sua assistente de sono infantil</p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div style={{ 
+          background: "#56629A", 
+          padding: "2rem", 
+          borderRadius: "16px", 
+          color: "#F7F3EA",
+          textAlign: "center",
+          maxWidth: "400px"
+        }}>
+          <p style={{ marginBottom: "1.5rem", lineHeight: "1.6" }}>
+            Olá! Eu sou a Lua. Estou aqui para ajudar você a entender melhor o sono do seu bebê e construir uma rotina mais tranquila.
+          </p>
+          <Link href="/login">
+            <button style={{
+              background: "#1E2352",
+              color: "#FFFFFF",
+              border: "none",
+              padding: "12px 24px",
+              borderRadius: "8px",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              fontWeight: "bold"
+            }}>
+              Começar
+            </button>
+          </Link>
         </div>
       </main>
     </div>
